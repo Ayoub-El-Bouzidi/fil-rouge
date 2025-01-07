@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+
+actor Teacher as T
+
+package "Sprint 1 - Core Features" {
+    usecase "Create Session" as CS
+    usecase "Add Activities" as AA
+    usecase "Login and Authentication" as LA
+}
+T -- CS
+T -- AA
+T -- LA
+
+@enduml

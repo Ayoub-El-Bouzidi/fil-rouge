@@ -3,14 +3,14 @@ left to right direction
 skinparam packageStyle rect
 
 actor Teacher as T
-actor Student as S
+
 
 package "Notes and Activities Management" {
     usecase "Create Session" as CS
     usecase "Add Activities" as AA
     usecase "Assign Notes" as AN
     usecase "View Reports" as VR
-    usecase "View Notes" as VN
+
 }
 
 T -- CS
@@ -18,6 +18,6 @@ T -- AA
 T -- AN
 T -- VR
 
-S -- VN
+
 
 @enduml

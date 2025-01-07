@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+
+actor Teacher as T
+
+package "Sprint 2 - Advanced Features" {
+    usecase "Assign Notes" as AN
+    usecase "View Reports" as VR
+    usecase "Search and Filter" as SF
+}
+T -- AN
+T -- VR
+T -- SF
+@enduml
