@@ -1,0 +1,67 @@
+@startuml
+title Cahier de Texte - Class Diagram (Fusionné Sprint 1)
+
+' ==== Classes principales ====
+class Formateur {
+    - id : int
+    - nom : String
+    - prenom : String
+    - email : String
+    + ajouterSeance(seance : Seance) : void
+    + consulterSeances() : List<Seance>
+}
+
+class Seance {
+    - id : int
+    - date : LocalDate
+    - heureDebut : LocalTime
+    - heureFin : LocalTime
+    - description : String
+    + ajouterActivite(activite : Activite) : void
+    + listerActivites() : List<Activite>
+}
+
+class Activite {
+    - id : int
+    - nom : String
+    - description : String
+    + afficherDetails() : String
+}
+
+class Module {
+    - id : int
+    - nom : String
+}
+
+class Responsable {
+    - id : int
+    - nom : String
+    - prenom : String
+    - email : String
+    + consulterPlanning() : List<Seance>
+    + validerSeance(seanceId: int) : bool
+}
+
+class Role {
+    - id : int
+    - name : String
+}
+
+class User {
+    - id : int
+    - name : String
+    - email : String
+    - password : String
+}
+
+' ==== Relations ====
+Formateur "1" -- "N" Seance : "planifie"
+Seance "1" -- "*" Activite : "contient"
+Seance "*" -- "1" Module : "appartient à"
+Responsable "1" -- "*" Seance : "valide"
+
+User "*" -- "*" Role : "a"
+User <|-- Formateur
+User <|-- Responsable
+
+@enduml
