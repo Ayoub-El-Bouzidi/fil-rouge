@@ -1,23 +1,37 @@
 @startuml
+title Cahier de Texte – Use Case Diagram (Sprint 1)
+
 left to right direction
-skinparam packageStyle rect
+skinparam packageStyle rectangle
 
-actor Teacher as T
+actor Formateur
+actor Responsable
+
+rectangle "Cahier de Texte" {
+
+  (Se connecter) as UC1
+  (Saisir une séance) as UC2
+  (Modifier une séance) as UC3
+  (Consulter ses séances) as UC4
+  (Ajouter une activité) as UC5
+  (Consulter les activités) as UC6
+
+  (Valider une séance) as UC7
+  (Consulter toutes les séances) as UC8
+  (Voir tableau de bord) as UC9
 
 
-package "Notes and Activities Management" {
-    usecase "Create Session" as CS
-    usecase "Add Activities" as AA
-    usecase "Assign Notes" as AN
-    usecase "View Reports" as VR
+  Formateur --> UC1
+  Formateur --> UC2
+  Formateur --> UC3
+  Formateur --> UC4
+  Formateur --> UC5
+  Formateur --> UC6
 
+  Responsable --> UC1
+  Responsable --> UC7
+  Responsable --> UC8
+  Responsable --> UC9
 }
-
-T -- CS
-T -- AA
-T -- AN
-T -- VR
-
-
 
 @enduml
