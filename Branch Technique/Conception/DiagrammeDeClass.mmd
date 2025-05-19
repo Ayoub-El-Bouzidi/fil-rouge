@@ -1,0 +1,36 @@
+classDiagram
+
+class Formateur {
+  id : int
+  nom : string
+  email : string
+  password : string
+}
+
+class Responsable {
+  id : int
+  nom : string
+  email : string
+  password : string
+}
+
+class Module {
+  id : int
+  nom : string
+  masse_horaire_totale : int
+}
+
+class Session {
+  id : int
+  date : date
+  heure_debut : time
+  heure_fin : time
+  duree : int
+  etat_validation : string
+  formateur_id : int
+  module_id : int
+}
+
+Formateur --> Session : planifie
+Module --> Session : concerne
+Responsable --> Session : valide
