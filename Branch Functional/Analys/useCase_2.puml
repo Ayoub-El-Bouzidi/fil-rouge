@@ -1,15 +1,21 @@
 @startuml
 left to right direction
-skinparam packageStyle rect
+skinparam packageStyle rectangle
 
-actor Teacher as T
+actor Responsable
 
-package "Sprint 2 - Advanced Features" {
-    usecase "Assign Notes" as AN
-    usecase "View Reports" as VR
-    usecase "Search and Filter" as SF
+rectangle "Sprint 2 - Responsable" {
+
+  usecase "Se connecter"
+  usecase "Afficher sessions à valider"
+  usecase "Consulter détails session"
+  usecase "Valider la session"
+  usecase "Voir état de validation"
+
+  Responsable --> "Se connecter"
+  Responsable --> "Afficher sessions à valider"
+  Responsable --> "Consulter détails session"
+  Responsable --> "Valider la session"
+  Responsable --> "Voir état de validation"
 }
-T -- AN
-T -- VR
-T -- SF
 @enduml

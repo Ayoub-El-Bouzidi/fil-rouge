@@ -1,6 +1,4 @@
 @startuml
-title Cahier de Texte – Use Case Diagram (Sprint 1)
-
 left to right direction
 skinparam packageStyle rectangle
 
@@ -8,30 +6,26 @@ actor Formateur
 actor Responsable
 
 rectangle "Cahier de Texte" {
+  
+  usecase "Choisir un module"
+  usecase "Saisir date + heure début + durée (ex : 5h)"
+  usecase "Calcul automatique de l’heure de fin"
+  usecase "Enregistrer la session (non modifiable)"
+  usecase "Se connecter"
+  usecase "Afficher les sessions du formateur"
+  usecase "Afficher les sessions dans tableau de bord"
+  usecase "Valider une session"
 
-  (Se connecter) as UC1
-  (Saisir une séance) as UC2
-  (Modifier une séance) as UC3
-  (Consulter ses séances) as UC4
-  (Ajouter une activité) as UC5
-  (Consulter les activités) as UC6
+ 
+  Formateur --> "Choisir un module"
+  Formateur --> "Saisir date + heure début + durée (ex : 5h)"
+  Formateur --> "Calcul automatique de l’heure de fin"
+  Formateur --> "Enregistrer la session (non modifiable)"
+  Formateur --> "Afficher les sessions du formateur"
+  Formateur --> "Se connecter"
 
-  (Valider une séance) as UC7
-  (Consulter toutes les séances) as UC8
-  (Voir tableau de bord) as UC9
-
-
-  Formateur --> UC1
-  Formateur --> UC2
-  Formateur --> UC3
-  Formateur --> UC4
-  Formateur --> UC5
-  Formateur --> UC6
-
-  Responsable --> UC1
-  Responsable --> UC7
-  Responsable --> UC8
-  Responsable --> UC9
+  Responsable --> "Se connecter"
+  Responsable --> "Afficher les sessions dans tableau de bord"
+  Responsable --> "Valider une session"
 }
-
 @enduml

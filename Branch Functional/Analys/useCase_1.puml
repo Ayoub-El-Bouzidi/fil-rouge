@@ -1,16 +1,23 @@
 @startuml
 left to right direction
-skinparam packageStyle rect
+skinparam packageStyle rectangle
 
-actor Teacher as T
+actor Formateur
 
-package "Sprint 1 - Core Features" {
-    usecase "Create Session" as CS
-    usecase "Add Activities" as AA
-    usecase "Login and Authentication" as LA
+rectangle "Sprint 1 - Formateur" {
+
+  usecase "Se connecter"
+  usecase "Sélectionner un module"
+  usecase "Saisir date, heure début et durée"
+  usecase "Calcul automatique heure fin"
+  usecase "Enregistrer la session"
+  usecase "Voir mes sessions (lecture seule)"
+
+  Formateur --> "Se connecter"
+  Formateur --> "Sélectionner un module"
+  Formateur --> "Saisir date, heure début et durée"
+  Formateur --> "Calcul automatique heure fin"
+  Formateur --> "Enregistrer la session"
+  Formateur --> "Voir mes sessions (lecture seule)"
 }
-T -- CS
-T -- AA
-T -- LA
-
 @enduml
