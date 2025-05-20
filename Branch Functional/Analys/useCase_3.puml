@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Responsable
+
+rectangle "Sprint 3 - Responsable" {
+
+  usecase "Se connecter"
+  usecase "Consulter sessions validées"
+  usecase "Filtrer par formateur/module/date"
+  usecase "Voir statistiques par formateur"
+  usecase "Exporter les données (.csv)"
+
+  Responsable --> "Se connecter"
+  Responsable --> "Consulter sessions validées"
+  Responsable --> "Filtrer par formateur/module/date"
+  Responsable --> "Voir statistiques par formateur"
+  Responsable --> "Exporter les données (.csv)"
+}
+@enduml

@@ -11,7 +11,6 @@ rectangle "Cahier de Texte" {
   usecase "Saisir date + heure début + durée (ex : 5h)"
   usecase "Calcul automatique de l’heure de fin"
   usecase "Enregistrer la session (non modifiable)"
-  usecase "Se connecter"
   usecase "Afficher les sessions du formateur"
   usecase "Afficher les sessions dans tableau de bord"
   usecase "Valider une session"
@@ -22,9 +21,7 @@ rectangle "Cahier de Texte" {
   Formateur --> "Calcul automatique de l’heure de fin"
   Formateur --> "Enregistrer la session (non modifiable)"
   Formateur --> "Afficher les sessions du formateur"
-  Formateur --> "Se connecter"
 
-  Responsable --> "Se connecter"
   Responsable --> "Afficher les sessions dans tableau de bord"
   Responsable --> "Valider une session"
 }
