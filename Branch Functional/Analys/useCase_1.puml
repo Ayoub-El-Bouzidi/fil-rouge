@@ -2,22 +2,56 @@
 left to right direction
 skinparam packageStyle rectangle
 
-actor Formateur
+actor Responsable
 
 rectangle "Sprint 1 - Formateur" {
+  
+  usecase "Voir les statistiques"
+  usecase "Modules terminés" as ModulesFinis
+  usecase "Modules restants" as ModulesRestants
+  usecase "Voir les séances" as VoirSeances
 
-  usecase "Se connecter"
-  usecase "Sélectionner un module"
-  usecase "Saisir date, heure début et durée"
-  usecase "Calcul automatique heure fin"
-  usecase "Enregistrer la session"
-  usecase "Voir mes sessions (lecture seule)"
-
-  Formateur --> "Se connecter"
-  Formateur --> "Sélectionner un module"
-  Formateur --> "Saisir date, heure début et durée"
-  Formateur --> "Calcul automatique heure fin"
-  Formateur --> "Enregistrer la session"
-  Formateur --> "Voir mes sessions (lecture seule)"
+  Responsable --> "Voir les statistiques"
+  "Voir les statistiques" <--. ModulesFinis : <<extends>>
+  "Voir les statistiques" <--. ModulesRestants : <<extends>>
+  "Voir les statistiques" <--. VoirSeances : <<extends>>
 }
 @enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+' @startuml
+' left to right direction
+' skinparam packageStyle rectangle
+
+' actor Formateur
+
+' rectangle "Sprint 1 - Formateur" {
+
+'   usecase "Se connecter"
+'   usecase "Sélectionner un module"
+'   usecase "Saisir date, heure début et durée"
+'   usecase "Calcul automatique heure fin"
+'   usecase "Enregistrer la session"
+'   usecase "Voir mes sessions (lecture seule)"
+
+'   Formateur --> "Se connecter"
+'   Formateur --> "Sélectionner un module"
+'   Formateur --> "Saisir date, heure début et durée"
+'   Formateur --> "Calcul automatique heure fin"
+'   Formateur --> "Enregistrer la session"
+'   Formateur --> "Voir mes sessions (lecture seule)"
+' }
+' @enduml

@@ -2,20 +2,15 @@
 left to right direction
 skinparam packageStyle rectangle
 
-actor Responsable
+actor Formateur
 
-rectangle "Sprint 2 - Responsable" {
+rectangle "Sprint 2 - Formateur" {
 
   usecase "Se connecter"
-  usecase "Afficher sessions à valider"
-  usecase "Consulter détails session"
-  usecase "Valider la session"
-  usecase "Voir état de validation"
+  usecase "CRUD Modules"
 
-  Responsable --> "Se connecter"
-  Responsable --> "Afficher sessions à valider"
-  Responsable --> "Consulter détails session"
-  Responsable --> "Valider la session"
-  Responsable --> "Voir état de validation"
+  Formateur -- "Se connecter"
+  Formateur -- "CRUD Modules"
+
 }
 @enduml
