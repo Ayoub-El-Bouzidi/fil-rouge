@@ -1,36 +1,36 @@
+---
+config:
+  theme: default
+---
 classDiagram
-
 class Formateur {
-  id : int
-  nom : string
-  email : string
-  password : string
+  int id
+  string nom
+  string email
+  string password
 }
-
 class Responsable {
-  id : int
-  nom : string
-  email : string
-  password : string
+  int ida
+  string nom
+  string email
+  string password
 }
-
 class Module {
-  id : int
-  nom : string
-  masse_horaire_totale : int
+  int id
+  string nom
+  int masse_horaire_totale
 }
-
 class Session {
-  id : int
-  date : date
-  heure_debut : time
-  heure_fin : time
-  duree : int
-  etat_validation : string
-  formateur_id : int
-  module_id : int
+  int id
+  date date
+  time heure_debut
+  time heure_fin
+  int duree
+  string etat_validation
+  int formateur_id
+  int module_id
+  int responsable_id
 }
-
-Formateur --> Session : planifie
-Module --> Session : concerne
-Responsable --> Session : valide
+Formateur "1" --> "*" Session
+Module "1" --> "*" Session
+Responsable "1" --> "*" Session

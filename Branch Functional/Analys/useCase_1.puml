@@ -7,9 +7,9 @@ actor Responsable
 rectangle "Sprint 1 - Formateur" {
   
   usecase "Voir les statistiques"
-  usecase "Modules terminés" as ModulesFinis
-  usecase "Modules restants" as ModulesRestants
-  usecase "Voir les séances" as VoirSeances
+  usecase "Les Modules terminés" as ModulesFinis
+  usecase "Les Modules restants" as ModulesRestants
+  usecase "Les séances" as VoirSeances
 
   Responsable --> "Voir les statistiques"
   "Voir les statistiques" <--. ModulesFinis : <<extends>>

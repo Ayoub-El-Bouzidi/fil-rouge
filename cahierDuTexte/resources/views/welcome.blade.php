@@ -13,7 +13,7 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     <h3>150</h3>
-                    <p>Formateurs</p>
+                    <p>Les Modules terminés</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-users"></i>
@@ -26,8 +26,8 @@
         <div class="col-lg-3 col-6">
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>53%</h3>
-                    <p>total de séances saisies</p>
+                    <h3>53</h3>
+                    <p>Les Modules restants</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-chart-line"></i>
@@ -41,7 +41,7 @@
             <div class="small-box bg-warning">
                 <div class="inner">
                     <h3>44</h3>
-                    <p>Les farmateurs sont actives</p>
+                    <p>Les séances</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-user-plus"></i>
@@ -51,7 +51,7 @@
         </div>
 
         <!-- Box 4 -->
-        <div class="col-lg-3 col-6">
+        {{-- <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">
                 <div class="inner">
                     <h3>65</h3>
@@ -62,6 +62,6 @@
                 </div>
                 <a href="#" class="small-box-footer">Plus d'infos <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-        </div>
+        </div> --}}
     </div>
 @stop
