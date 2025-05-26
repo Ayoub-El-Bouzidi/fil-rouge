@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('groupe_formateure', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->integer('masse_horaire_totale');
+            $table->foreignId('groupe_id')->constrained('groupes')->onDelete('cascade');
+            $table->foreignId('formateur_id')->constrained('formateurs')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('groupe_formateure');
     }
 };
